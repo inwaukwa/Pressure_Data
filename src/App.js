@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import pressure from './pressure.json';
+import PressureChart from './PressureChart'
+import PressureStats from './PressureStats'
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <PressureChart data={pressure.pressure_points}/>
+              <PressureStats
+              num_contractions={pressure.count_contractions}
+              contraction_per_sec={pressure.count_contractions}
+              /> */}
+      {/* <pre>{JSON.stringify(pressure.pressure_points, null, 2) }</pre> */}
+      <PressureChart/>
+      <PressureStats/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
